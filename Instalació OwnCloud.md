@@ -1,4 +1,4 @@
-# **MANUAL D' INSTALACIÓ OWNCLOUD**
+# **MANUAL D' INSTALACIÓ OWNCLOUD (lxc/lxd)**
 
 1. Primer tenim que crear un contenidor on instalar `OwnCloud`.
 
@@ -56,7 +56,50 @@
 
     `exit`
 
-    **7.5** Comprobem que el MySQL 
 
+8. Ara tenim que accedir al directori `/var/www/html`.   
 
-8.  
+  `cd /var/www/html`
+
+9. Dins del directori, tenim que crear una `clau pública`.
+
+  `cat ~/.ssh/elmeucontenidor.pub`
+
+10. Una vegada generada la clau, la copiem en el contenidor.
+
+  `vim /root/.ssh/authorized_keys`
+
+11. Després tenim que copiar l'enllaç de descarrega de l'OwnCloud i posar-ho amb l'ordre `wget`.
+
+  `wget https://download.owncloud.org/community/owncloud-complete-20210721.zip`
+
+12. Instalem `unzip` si no el tenim a la màquina.
+
+  `apt install unzip`
+
+13. Descomprimim l'arxiu `.zip`.
+
+  `unzip owncloud-complete-20210721.zip`
+
+14. Ara tenim que donar-li permisos del directori `/var/www/html`.
+
+  `chown -R www-data:www-data /var/www/html`
+
+  `chmod -R 775 /var/www/html`
+
+15. Per comprovar que ho hem fet correctament, posem la `IP del nostre conteidor` al nostre Buscador Web i ens tendria que redirigir a l'`OwnCloud`.
+
+  `https:// [la IP del teu contenidor]`
+
+16. Per últim, aturem el contenidor.
+
+  `lxc stop [nom del teu contenidor]`
+
+```  +-----------------+---------+------+------+-----------+-----------+
+|      NAME       |  STATE  | IPV4 | IPV6 |   TYPE    | SNAPSHOTS |
++-----------------+---------+------+------+-----------+-----------+
+| contenedor      | STOPPED |      |      | CONTAINER | 0         |
++-----------------+---------+------+------+-----------+-----------+
+| elmeucontenidor | STOPPED |      |      | CONTAINER | 0         |
++-----------------+---------+------+------+-----------+-----------+
+```
