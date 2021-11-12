@@ -1,0 +1,3 @@
+#  **CONFIGURACIÓ OWNCLOUD**
+
+1. 

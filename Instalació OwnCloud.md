@@ -46,11 +46,11 @@
 
     **7.2** Crear un `usuari`.
 
-    `CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
+    `CREATE USER '[el nom d'usuari que vulguis]'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
 
     **7.3** Donar privilegis a l'usuari
 
-    `GRANT ALL ON bbdd.* to 'usuario'@'localhost';`
+    `GRANT ALL ON bbdd.* to '[el teu nom d'usuari]'@'localhost';`
 
     **7.4** Sortim del `MySQL`.
 
