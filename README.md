@@ -1,6 +1,6 @@
 # Manuall
 
-* [Manual de instalació de NextCloud](Instalació de NextCloud.md)
-* [Manual de instlació de OwnCloud](Instalació de OwnCloud.md)
-* [Manual de configuració de NextCloud](Configuració de NextCloud.md)
-* [Manual de configuració de OwnCloud](Configuració de OwnCloud.md)
+* [Manual de instalació de NextCloud](Instalació_NextCloud.md)
+* [Manual de instlació de OwnCloud](Instalació_OwnCloud.md)
+* [Manual de configuració de NextCloud](Configuració_NextCloud.md)
+* [Manual de configuració de OwnCloud](Configuració_OwnCloud.md)
